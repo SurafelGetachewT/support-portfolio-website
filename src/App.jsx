@@ -6,7 +6,6 @@ import Home from "./pages/Home";
 import AboutPage from "./pages/AboutPage";
 import ResumePage from "./pages/ResumePage";
 import Showcases from "./pages/Showcases";
-import Testimonials from "./pages/Testimonials";
 import ContactPage from "./pages/ContactPage";
 import TicketExamplesPage from "./pages/TicketExamplesPage";
 import CryptoP2PCaseStudiesPage from "./pages/CryptoP2PCaseStudiesPage";
@@ -50,7 +49,6 @@ function App() {
             path="/showcases/technical-support-engineer-examples"
             element={<TechnicalSupportExamplesPage />}
           />
-          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

@@ -18,6 +18,7 @@ function CryptoP2PCaseStudiesPage() {
       intro={cryptoP2PShowcase.intro}
       skills={cryptoP2PShowcase.skills}
       repoHref={summary.repoHref}
+      pdfHref={summary.pdfHref}
     >
       <div className="grid gap-6">
         {cryptoP2PShowcase.cases.map((caseStudy, index) => (

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Badge from "./Badge";
 import { contactLinks } from "../data/portfolioData";
 import { proofHighlights, sitePositioning } from "../data/showcaseData";
-import profileImage from "../assets/surafel-profile.png";
+import profileImage from "../assets/surafel-profile.webp";
 
 const ctas = [
   { label: "View Showcases", href: "/showcases", primary: true, internal: true },
@@ -19,8 +19,8 @@ function Hero() {
       id="home"
       className="relative overflow-hidden bg-navy-950 text-white"
     >
-      <div className="absolute inset-0 -z-0 bg-[linear-gradient(120deg,rgba(31,143,255,0.18),transparent_34%,rgba(14,165,233,0.14)),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[length:auto,36px_36px,36px_36px]" />
-      <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#1f8fff,#67e8f9,#1f8fff)]" />
+      <div className="absolute inset-0 -z-0 bg-[radial-gradient(circle_at_76%_24%,rgba(20,184,166,0.22),transparent_30%),linear-gradient(120deg,rgba(6,182,212,0.18),transparent_36%,rgba(245,158,11,0.12)),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[length:auto,auto,36px_36px,36px_36px]" />
+      <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#06b6d4,#10b981,#f59e0b,#06b6d4)]" />
       <div className="section-shell relative z-10 grid items-center gap-10 py-12 sm:py-16 lg:grid-cols-[1.03fr_0.97fr] lg:py-20">
         <div className="motion-safe:animate-fade-up">
           <Badge tone="blue" className="mb-6 border-white/10 bg-white/10 text-sky-100 shadow-sm shadow-sky-950/20">
@@ -32,7 +32,7 @@ function Hero() {
             {sitePositioning.name}
           </p>
 
-          <h1 className="max-w-4xl text-4xl font-black leading-[0.98] text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
+          <h1 className="max-w-4xl text-[2.15rem] font-black leading-[1.04] text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
             {sitePositioning.headline}
           </h1>
 
@@ -85,9 +85,9 @@ function Hero() {
 
         <div className="motion-safe:animate-fade-up lg:pl-4">
           <div className="relative mx-auto max-w-xs sm:max-w-sm">
-            <div className="absolute -inset-4 rounded-lg bg-[linear-gradient(135deg,rgba(31,143,255,0.22),rgba(103,232,249,0.12))] blur-2xl" />
+            <div className="absolute -inset-4 rounded-lg bg-[linear-gradient(135deg,rgba(6,182,212,0.22),rgba(16,185,129,0.16),rgba(245,158,11,0.10))] blur-2xl" />
             <div className="relative overflow-hidden rounded-lg border border-white/15 bg-white/10 p-3 shadow-2xl shadow-sky-950/30 backdrop-blur">
-              <div className="absolute inset-x-3 top-3 z-10 h-1 rounded-full bg-[linear-gradient(90deg,#1f8fff,#67e8f9)]" />
+              <div className="absolute inset-x-3 top-3 z-10 h-1 rounded-full bg-[linear-gradient(90deg,#06b6d4,#10b981,#f59e0b)]" />
               <img
                 src={profileImage}
                 alt="Professional portrait of Surafel Getachew"

@@ -14,6 +14,7 @@ function TicketExamplesPage() {
       intro={ticketShowcase.intro}
       skills={ticketShowcase.skills}
       repoHref={summary.repoHref}
+      pdfHref={summary.pdfHref}
     >
       <div className="grid gap-6">
         {ticketShowcase.examples.map((ticket, index) => (

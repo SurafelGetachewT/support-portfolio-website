@@ -13,6 +13,7 @@ function SupportTemplatesPage() {
       intro={supportTemplatesShowcase.intro}
       skills={supportTemplatesShowcase.skills}
       repoHref={summary.repoHref}
+      pdfHref={summary.pdfHref}
     >
       <div className="grid gap-6">
         {supportTemplatesShowcase.templates.map((template, index) => (

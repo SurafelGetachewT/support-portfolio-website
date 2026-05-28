@@ -17,6 +17,7 @@ function TroubleshootingWorkflowsPage() {
       intro={troubleshootingShowcase.intro}
       skills={troubleshootingShowcase.skills}
       repoHref={summary.repoHref}
+      pdfHref={summary.pdfHref}
     >
       <div className="grid gap-6">
         {troubleshootingShowcase.workflows.map((workflow, index) => (

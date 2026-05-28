@@ -13,8 +13,8 @@ function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden bg-navy-950 text-white">
-      <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(31,143,255,0.18),transparent_36%,rgba(16,185,129,0.14)),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[length:auto,36px_36px,36px_36px]" />
-      <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#1f8fff,#10b981,#f59e0b,#1f8fff)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_18%,rgba(20,184,166,0.20),transparent_30%),linear-gradient(120deg,rgba(6,182,212,0.18),transparent_36%,rgba(245,158,11,0.12)),linear-gradient(rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px)] bg-[length:auto,auto,36px_36px,36px_36px]" />
+      <div className="absolute inset-x-0 top-0 h-1 bg-[linear-gradient(90deg,#06b6d4,#10b981,#f59e0b,#06b6d4)]" />
       <div className="section-shell relative z-10 py-12 sm:py-16">
         {backTo ? (
           <Link
@@ -33,7 +33,7 @@ function PageHero({
                 {eyebrow}
               </p>
             ) : null}
-            <h1 className="max-w-5xl text-4xl font-black leading-tight text-white sm:text-5xl">
+            <h1 className="max-w-5xl text-3xl font-black leading-tight text-white sm:text-5xl">
               {title}
             </h1>
             {description ? (

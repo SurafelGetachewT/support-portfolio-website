@@ -20,7 +20,7 @@ function Certificates() {
 
         <div className="grid gap-5 md:grid-cols-3">
           {certificates.map((certificate) => {
-            const isPlaceholder = certificate.href === "#";
+            const isReserved = certificate.href === "#";
 
             return (
               <Card
@@ -38,14 +38,14 @@ function Certificates() {
                   {certificate.issuer}
                 </p>
                 <div className="mt-5">
-                  <Badge tone={isPlaceholder ? "amber" : "green"}>
+                  <Badge tone={isReserved ? "amber" : "green"}>
                     {certificate.status}
                   </Badge>
                 </div>
-                {isPlaceholder ? (
+                {isReserved ? (
                   <span className="mt-6 inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-500">
                     <FolderOpen size={16} />
-                    Upload Later
+                    Add Certificate
                   </span>
                 ) : (
                   <a

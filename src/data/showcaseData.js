@@ -44,6 +44,7 @@ export const showcaseSummaries = [
       "Written communication",
       "Escalation judgment",
     ],
+    pdfHref: "/pdfs/customer-support-ticket-examples.pdf",
     repoHref: "#",
   },
   {
@@ -60,6 +61,7 @@ export const showcaseSummaries = [
       "Payment verification",
       "Risk awareness",
     ],
+    pdfHref: "/pdfs/crypto-p2p-support-case-studies.pdf",
     repoHref: "#",
   },
   {
@@ -76,6 +78,7 @@ export const showcaseSummaries = [
       "Clear documentation",
       "Self-service support",
     ],
+    pdfHref: "/pdfs/knowledge-base-articles.pdf",
     repoHref: "#",
   },
   {
@@ -92,6 +95,7 @@ export const showcaseSummaries = [
       "Bug reporting",
       "Escalation",
     ],
+    pdfHref: "/pdfs/technical-troubleshooting-workflows.pdf",
     repoHref: "#",
   },
   {
@@ -108,6 +112,7 @@ export const showcaseSummaries = [
       "Internal documentation",
       "Process improvement",
     ],
+    pdfHref: "/pdfs/support-operations-templates.pdf",
     repoHref: "#",
   },
   {
@@ -124,6 +129,7 @@ export const showcaseSummaries = [
       "Web app bugs",
       "Engineering handoff",
     ],
+    pdfHref: "/pdfs/technical-support-engineer-examples.pdf",
     repoHref: "#",
   },
 ];
@@ -1169,21 +1175,3 @@ Surafel`,
     },
   ],
 };
-
-export const feedbackProof = [
-  {
-    title: "Verified feedback section",
-    description:
-      "Space reserved for real client, manager, Upwork, or LinkedIn feedback screenshots after permission is available.",
-  },
-  {
-    title: "Portfolio proof assets",
-    description:
-      "The showcase pages are designed for screenshots, PDF export, LinkedIn Featured links, and Upwork portfolio uploads.",
-  },
-  {
-    title: "No fake testimonials",
-    description:
-      "This section intentionally avoids invented praise and keeps the portfolio evidence-based.",
-  },
-];

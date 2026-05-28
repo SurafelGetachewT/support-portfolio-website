@@ -10,7 +10,7 @@ The website presents my support background, resume, tools, experience areas, tic
 
 ## Purpose
 
-The purpose of this project is to show my ability to combine customer communication, technical troubleshooting, documentation, support operations, escalation judgment, and crypto/P2P support knowledge in one polished portfolio.
+The purpose of this project is to show my ability to combine customer communication, technical troubleshooting, documentation, support operations, escalation judgment, and crypto/P2P support knowledge in a professional portfolio.
 
 ## Main Pages
 
@@ -24,14 +24,13 @@ The purpose of this project is to show my ability to combine customer communicat
 - Technical Troubleshooting Workflows
 - Support Operations Templates
 - Technical Support Engineer Examples
-- Testimonials / Feedback
 - Contact
 
 ## Features
 
 - Modern routed React portfolio website
 - Six detailed showcase pages
-- Print-ready showcase pages for PDF export
+- Direct PDF downloads for showcase pages
 - Sticky navigation with mobile menu
 - Responsive desktop, tablet, and mobile layouts
 - Professional SaaS/support-dashboard visual style
@@ -75,9 +74,9 @@ npm run dev
 npm run build
 ```
 
-## PDF Export Workflow
+## Showcase PDFs
 
-Open any showcase page and click **Download PDF**. In the browser print dialog, choose **Save as PDF**.
+Open any showcase page and click **Download PDF** to view the matching PDF file.
 
 Recommended PDF files:
 

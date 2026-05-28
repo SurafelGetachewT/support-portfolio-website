@@ -15,7 +15,6 @@ export const navLinks = [
   { label: "About", href: "/about" },
   { label: "Resume", href: "/resume" },
   { label: "Showcases", href: "/showcases" },
-  { label: "Feedback", href: "/testimonials" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -420,20 +419,20 @@ export const resumeSnapshot = {
 export const certificates = [
   {
     title: "Customer Support Certificate",
-    issuer: "Upload certificate file later",
-    status: "Placeholder",
+    issuer: "Certificate file can be added here",
+    status: "Reserved space",
     href: "#",
   },
   {
     title: "Technical Support Certificate",
-    issuer: "Upload certificate file later",
-    status: "Placeholder",
+    issuer: "Certificate file can be added here",
+    status: "Reserved space",
     href: "#",
   },
   {
     title: "Crypto / Fintech Support Certificate",
-    issuer: "Upload certificate file later",
-    status: "Placeholder",
+    issuer: "Certificate file can be added here",
+    status: "Reserved space",
     href: "#",
   },
 ];

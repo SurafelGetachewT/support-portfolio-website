@@ -17,10 +17,6 @@
       "destination": "/"
     },
     {
-      "source": "/testimonials",
-      "destination": "/"
-    },
-    {
       "source": "/contact",
       "destination": "/"
     }

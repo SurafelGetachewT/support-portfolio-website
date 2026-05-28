@@ -10,10 +10,27 @@ import Card from "../components/Card";
 import Badge from "../components/Badge";
 import {
   cryptoP2PShowcase,
-  feedbackProof,
   proofHighlights,
   showcaseSummaries,
 } from "../data/showcaseData";
+
+const workingStyle = [
+  {
+    title: "Clear first response",
+    description:
+      "Acknowledge the issue, reduce confusion, and ask only for the details needed to move the case forward.",
+  },
+  {
+    title: "Evidence-based escalation",
+    description:
+      "Document the customer impact, checks completed, screenshots, IDs, and the exact handoff needed by the next team.",
+  },
+  {
+    title: "Crypto risk awareness",
+    description:
+      "Handle deposits, withdrawals, P2P orders, payment proof, and account security without exposing sensitive risk rules.",
+  },
+];
 
 function Home() {
   return (
@@ -27,8 +44,8 @@ function Home() {
           <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeader
               eyebrow="Showcases"
-              title="Six support proof pages in one portfolio."
-              description="Recruiters and clients can review ticket writing, crypto/P2P cases, help center articles, troubleshooting flows, templates, and technical support examples from one clean website."
+              title="Support work samples for the issues users actually bring."
+              description="Review how I respond to account access, billing, KYC, crypto deposits, P2P disputes, bugs, technical handoffs, and help center content."
             />
             <Link
               to="/showcases"
@@ -57,13 +74,13 @@ function Home() {
                 <Bitcoin size={28} />
               </div>
               <h2 className="mt-5 text-3xl font-black sm:text-4xl">
-                Crypto & P2P support is the strongest portfolio signal.
+                Crypto & P2P support is where my experience stands out.
               </h2>
               <p className="mt-4 text-base leading-8 text-slate-200">
-                Many support applicants can answer general tickets. This
-                portfolio also proves transaction investigation, P2P dispute
-                evidence review, wrong-network deposit handling, and
-                fraud-aware escalation.
+                The case studies show transaction investigation, payment
+                verification, wrong-network deposit handling, P2P dispute
+                evidence review, and careful escalation for risk-sensitive
+                cases.
               </p>
               <Link
                 to="/showcases/crypto-p2p-support-case-studies"
@@ -92,9 +109,9 @@ function Home() {
       <section className="section-padding bg-slate-50">
         <div className="section-shell">
           <SectionHeader
-            eyebrow="Proof"
-            title="Built for Upwork, LinkedIn, GitHub, and job applications."
-            description="The content is structured so each showcase can become a screenshot set, a PDF export, a GitHub repository, and a LinkedIn Featured item."
+            eyebrow="Snapshot"
+            title="A quick view of the support work I can handle."
+            description="The numbers and tools below summarize the support volume, crypto/P2P exposure, and remote support stack behind the work samples."
           />
           <div className="grid gap-5 lg:grid-cols-4">
             {proofHighlights.map((item) => (
@@ -107,7 +124,7 @@ function Home() {
             ))}
           </div>
           <div className="mt-5 grid gap-5 md:grid-cols-3">
-            {feedbackProof.map((item) => (
+            {workingStyle.map((item) => (
               <Card key={item.title} className="p-5">
                 <h3 className="text-lg font-black text-navy-950">
                   {item.title}

@@ -21,6 +21,7 @@ function TechnicalSupportExamplesPage() {
       intro={technicalSupportShowcase.intro}
       skills={technicalSupportShowcase.skills}
       repoHref={summary.repoHref}
+      pdfHref={summary.pdfHref}
     >
       <div className="grid gap-6">
         {technicalSupportShowcase.examples.map((example, index) => (

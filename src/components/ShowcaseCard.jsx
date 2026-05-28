@@ -41,19 +41,18 @@ function ShowcaseCard({ showcase, compact = false }) {
           View Showcase
           <ArrowRight size={16} />
         </Link>
-        <Link
-          to={`${showcase.route}?print=1`}
-          className="focus-ring no-print inline-flex items-center justify-center gap-2 rounded-lg border border-brand-100 bg-brand-50 px-4 py-2.5 text-sm font-bold text-brand-700 transition hover:border-brand-200 hover:bg-brand-100"
-        >
-          Download PDF
-          <Download size={16} />
-        </Link>
-        {showcase.repoHref === "#" ? (
-          <span className="no-print inline-flex items-center justify-center gap-2 rounded-lg border border-slate-200 bg-white px-4 py-2.5 text-sm font-bold text-slate-400">
-            GitHub Repo
-            <Github size={16} />
-          </span>
-        ) : (
+        {showcase.pdfHref ? (
+          <a
+            href={showcase.pdfHref}
+            target="_blank"
+            rel="noreferrer"
+            className="focus-ring no-print inline-flex items-center justify-center gap-2 rounded-lg border border-brand-100 bg-brand-50 px-4 py-2.5 text-sm font-bold text-brand-700 transition hover:border-brand-200 hover:bg-brand-100"
+          >
+            PDF
+            <Download size={16} />
+          </a>
+        ) : null}
+        {showcase.repoHref !== "#" ? (
           <a
             href={showcase.repoHref}
             target="_blank"
@@ -63,7 +62,7 @@ function ShowcaseCard({ showcase, compact = false }) {
             GitHub Repo
             <Github size={16} />
           </a>
-        )}
+        ) : null}
       </div>
     </Card>
   );
