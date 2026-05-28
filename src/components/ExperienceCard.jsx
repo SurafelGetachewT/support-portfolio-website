@@ -12,7 +12,7 @@ function ExperienceCard({ experience }) {
           <Icon size={22} />
         </div>
         <div>
-          <h3 className="text-xl font-bold tracking-tight text-navy-950">
+          <h3 className="text-xl font-bold text-navy-950">
             {experience.role}
           </h3>
           <div className="mt-4 space-y-3 text-sm leading-7 text-slate-600">

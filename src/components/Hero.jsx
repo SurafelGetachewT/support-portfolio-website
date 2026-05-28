@@ -1,11 +1,13 @@
 import { ArrowRight, FileText, Linkedin, Mail, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import Badge from "./Badge";
-import { contactLinks, heroHighlights } from "../data/portfolioData";
+import { contactLinks } from "../data/portfolioData";
+import { proofHighlights, sitePositioning } from "../data/showcaseData";
 import profileImage from "../assets/surafel-profile.png";
 
 const ctas = [
-  { label: "View Support Portfolio", href: "#support-portfolio", primary: true },
-  { label: "Resume", href: "#resume", icon: FileText },
+  { label: "View Showcases", href: "/showcases", primary: true, internal: true },
+  { label: "Resume", href: "/resume", icon: FileText, internal: true },
   { label: "Email Me", href: contactLinks.email, icon: Mail },
   { label: "View LinkedIn", href: contactLinks.linkedin, icon: Linkedin },
   { label: "Telegram", href: contactLinks.telegram, icon: Send },
@@ -27,27 +29,22 @@ function Hero() {
           </Badge>
 
           <p className="mb-4 text-lg font-semibold text-sky-200">
-            Hi, I'm Surafel Getachew.
+            {sitePositioning.name}
           </p>
 
-          <h1 className="max-w-4xl text-4xl font-black leading-[0.98] tracking-tight text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
-            Technical Customer Support Specialist for SaaS, Crypto, Fintech &
-            Digital Platforms
+          <h1 className="max-w-4xl text-4xl font-black leading-[0.98] text-white drop-shadow-sm sm:text-5xl lg:text-6xl">
+            {sitePositioning.headline}
           </h1>
 
           <p className="mt-6 max-w-3xl border-l-2 border-brand-500 pl-4 text-lg leading-8 text-slate-100">
-            I help users resolve account, payment, transaction, technical,
-            onboarding, and platform-related issues through clear
-            communication, structured troubleshooting, and reliable support
-            documentation.
+            {sitePositioning.subheadline}
           </p>
 
           <p className="mt-4 max-w-3xl text-base leading-7 text-slate-300">
-            I'm a Technical Customer Support Specialist with experience across
-            crypto exchanges, SaaS platforms, digital services, telecom support,
-            and online work platforms. I specialize in customer communication,
-            technical troubleshooting, ticket handling, crypto/P2P support,
-            knowledge base writing, and escalation workflows.
+            I help SaaS, fintech, crypto, and digital platform users resolve
+            account, payment, transaction, onboarding, and technical issues
+            through clear communication, structured troubleshooting, accurate
+            documentation, and professional escalation.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
@@ -55,17 +52,28 @@ function Hero() {
               const Icon = cta.icon ?? ArrowRight;
               const isExternal = cta.href.startsWith("http");
 
+              const className = `focus-ring inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition ${
+                cta.primary
+                  ? "bg-white text-navy-950 shadow-lg shadow-sky-900/30 hover:bg-brand-50"
+                  : "border border-white/15 bg-white/10 text-white shadow-sm hover:bg-white/15"
+              }`;
+
+              if (cta.internal) {
+                return (
+                  <Link key={cta.label} to={cta.href} className={className}>
+                    {cta.label}
+                    <Icon size={17} />
+                  </Link>
+                );
+              }
+
               return (
                 <a
                   key={cta.label}
                   href={cta.href}
                   target={isExternal ? "_blank" : undefined}
                   rel={isExternal ? "noreferrer" : undefined}
-                  className={`focus-ring inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-bold transition ${
-                    cta.primary
-                      ? "bg-white text-navy-950 shadow-lg shadow-sky-900/30 hover:bg-brand-50"
-                      : "border border-white/15 bg-white/10 text-white shadow-sm hover:bg-white/15"
-                  }`}
+                  className={className}
                 >
                   {cta.label}
                   <Icon size={17} />
@@ -103,12 +111,15 @@ function Hero() {
 
         <div className="lg:col-span-2">
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-            {heroHighlights.map((item) => (
+            {proofHighlights.map((item) => (
               <div
-                key={item}
+                key={item.label}
                 className="rounded-lg border border-white/10 bg-white/10 px-4 py-4 shadow-sm backdrop-blur"
               >
-                <p className="text-sm font-bold text-white">{item}</p>
+                <p className="text-xl font-black text-white">{item.value}</p>
+                <p className="mt-1 text-sm font-semibold leading-5 text-slate-200">
+                  {item.label}
+                </p>
               </div>
             ))}
           </div>

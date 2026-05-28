@@ -1,0 +1,28 @@
+{
+  "rewrites": [
+    {
+      "source": "/about",
+      "destination": "/"
+    },
+    {
+      "source": "/resume",
+      "destination": "/"
+    },
+    {
+      "source": "/showcases",
+      "destination": "/"
+    },
+    {
+      "source": "/showcases/:path*",
+      "destination": "/"
+    },
+    {
+      "source": "/testimonials",
+      "destination": "/"
+    },
+    {
+      "source": "/contact",
+      "destination": "/"
+    }
+  ]
+}

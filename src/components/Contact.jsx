@@ -21,7 +21,7 @@ function ContactSection() {
               <p className="mb-3 inline-flex rounded-md border border-white/10 bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-100">
                 Contact
               </p>
-              <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl">
+              <h2 className="text-3xl font-black text-white sm:text-4xl">
                 Interested in working together?
               </h2>
               <p className="mt-4 max-w-2xl text-base leading-7 text-slate-200 sm:text-lg">

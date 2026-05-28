@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link, NavLink } from "react-router-dom";
 import { navLinks } from "../data/portfolioData";
 
 function Navbar() {
@@ -8,33 +9,38 @@ function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/75 bg-white/90 backdrop-blur-xl">
       <nav className="section-shell flex h-16 items-center justify-between">
-        <a href="#home" className="focus-ring rounded-md">
-          <span className="block text-sm font-bold tracking-tight text-navy-950 sm:text-base">
+        <Link to="/" className="focus-ring rounded-md">
+          <span className="block text-sm font-bold text-navy-950 sm:text-base">
             Surafel Getachew
           </span>
           <span className="hidden text-xs font-medium text-slate-500 sm:block">
-            Technical Customer Support Specialist
+            Support Portfolio
           </span>
-        </a>
+        </Link>
 
         <div className="hidden items-center gap-1 lg:flex">
           {navLinks.map((link) => (
-            <a
+            <NavLink
               key={link.href}
-              href={link.href}
-              className="focus-ring rounded-md px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50 hover:text-brand-700"
+              to={link.href}
+              end={link.href === "/"}
+              className={({ isActive }) =>
+                `focus-ring rounded-md px-3 py-2 text-sm font-semibold transition hover:bg-slate-50 hover:text-brand-700 ${
+                  isActive ? "bg-brand-50 text-brand-700" : "text-slate-600"
+                }`
+              }
             >
               {link.label}
-            </a>
+            </NavLink>
           ))}
         </div>
 
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="focus-ring hidden rounded-lg bg-navy-950 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-navy-800 md:inline-flex"
         >
           Contact Me
-        </a>
+        </Link>
 
         <button
           type="button"
@@ -52,14 +58,19 @@ function Navbar() {
           <div className="section-shell py-3">
             <div className="grid gap-1">
               {navLinks.map((link) => (
-                <a
+                <NavLink
                   key={link.href}
-                  href={link.href}
+                  to={link.href}
+                  end={link.href === "/"}
                   onClick={() => setIsOpen(false)}
-                  className="focus-ring rounded-lg px-3 py-3 text-sm font-semibold text-slate-700 transition hover:bg-brand-50 hover:text-brand-700"
+                  className={({ isActive }) =>
+                    `focus-ring rounded-lg px-3 py-3 text-sm font-semibold transition hover:bg-brand-50 hover:text-brand-700 ${
+                      isActive ? "bg-brand-50 text-brand-700" : "text-slate-700"
+                    }`
+                  }
                 >
                   {link.label}
-                </a>
+                </NavLink>
               ))}
             </div>
           </div>

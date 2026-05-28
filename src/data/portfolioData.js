@@ -7,18 +7,16 @@ export const contactLinks = {
   emailAddress: "suragetch@gmail.com",
   resume:
     "https://drive.google.com/file/d/1z_WUxdA-mDyNGK9bwCF7Z1aNA8E6yn9h/view?usp=drive_link",
-  resumePdf: "resume/Surafel_Getachew_Resume.pdf",
+  resumePdf: "/resume/Surafel_Getachew_Resume.pdf",
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Support Portfolio", href: "#support-portfolio" },
-  { label: "Resume", href: "#resume" },
-  { label: "Certificates", href: "#certificates" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Resume", href: "/resume" },
+  { label: "Showcases", href: "/showcases" },
+  { label: "Feedback", href: "/testimonials" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const heroHighlights = [

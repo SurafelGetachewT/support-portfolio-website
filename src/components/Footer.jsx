@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Send } from "lucide-react";
+import { Link } from "react-router-dom";
 import { contactLinks, navLinks } from "../data/portfolioData";
 
 const socialLinks = [
@@ -30,13 +31,13 @@ function Footer() {
 
           <div className="flex flex-wrap gap-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.href}
-                href={link.href}
+                to={link.href}
                 className="focus-ring rounded-md px-2 py-1 text-sm font-semibold text-slate-600 hover:text-brand-700"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </div>
 
